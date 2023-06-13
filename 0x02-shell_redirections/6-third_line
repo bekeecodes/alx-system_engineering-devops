@@ -1,10 +1,2 @@
-#!/bin/python3
-try:
-    with open('iacta', 'r') as file:
-        lines = file.readlines()
-        if len(lines) >= 3:
-            print(lines[2])
-        else:
-            print("The file does not have at least three lines.")
-except FileNotFoundError:
-    print("File not found.")
+#!/bin/bash
+head -n 3 iacta | tail -n +3
